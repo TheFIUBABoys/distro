@@ -15,10 +15,67 @@ version = 0.8.7
         aux = 2518
         cnfg = configs/R8.cfg
         slot0 = NM-1FE-TX
-        f0/0 = R7 f1/0
-        x = 491.67323164
+        f0/0 = HUB6 2
+        x = 442.175756957
+        y = 395.1930009
+        z = 1.0
+[127.0.0.1:7203]
+    workingdir = /tmp
+    udp = 10301
+    [[3640]]
+        image = /home/tomas/Descargas/gns3-legacy-GNS3-0.8.7/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
+        idlepc = 0x60593c70
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER R10]]
+        model = 3640
+        console = 2123
+        aux = 2523
+        cnfg = configs/R10.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = HUB7 2
+        slot1 = NM-1FE-TX
+        x = 170.646752982
         y = 349.938166904
         z = 1.0
+    [[ROUTER R11]]
+        model = 3640
+        console = 2124
+        aux = 2524
+        cnfg = configs/R11.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = HUB7 3
+        slot1 = NM-1FE-TX
+        x = 85.7939392393
+        y = 349.938166904
+        z = 1.0
+    [[ROUTER R9]]
+        model = 3640
+        console = 2164
+        aux = 2599
+        cnfg = configs/R9.cfg
+        slot0 = NM-1FE-TX
+        f0/0 = HUB6 3
+        slot1 = NM-1FE-TX
+        x = 268.227488785
+        y = 390.950360213
+        z = 1.0
+    [[ROUTER B6]]
+        model = 3640
+        console = 2116
+        aux = 2516
+        cnfg = configs/B6.cfg
+        slot0 = NM-16ESW
+        f0/0 = HUB4 2
+        f0/1 = HUB5 1
+        slot1 = NM-16ESW
+        symbol = ethernet_switch
+        x = 633.094587877
+        y = -75.7401153701
+        z = 1.0
+        hx = -34.9510528701
+        hy = -12.2720779387
 [127.0.0.1:7200]
     workingdir = /tmp
     udp = 10001
@@ -88,6 +145,7 @@ version = 0.8.7
         f0/2 = R2 f0/0
         f0/3 = R3 f0/0
         slot1 = NM-16ESW
+        symbol = ethernet_switch
         x = 252.6711396
         y = 37.3969696196
         z = 1.0
@@ -102,6 +160,7 @@ version = 0.8.7
         slot1 = NM-16ESW
         slot2 = NM-16ESW
         slot3 = NM-16ESW
+        symbol = ethernet_switch
         x = -114.644660941
         y = 24.9583694397
         z = 1.0
@@ -114,6 +173,7 @@ version = 0.8.7
         f0/0 = HUB1 2
         f0/1 = B2 f0/0
         slot1 = NM-16ESW
+        symbol = ethernet_switch
         x = -111.64466094
         y = -41.9878066911
         z = 1.0
@@ -130,6 +190,7 @@ version = 0.8.7
         slot1 = NM-16ESW
         slot2 = NM-16ESW
         slot3 = NM-16ESW
+        symbol = ethernet_switch
         x = -0.473088065419
         y = 3.45584412272
         z = 1.0
@@ -143,6 +204,7 @@ version = 0.8.7
         f0/1 = B4 f0/1
         f0/2 = HUB3 2
         slot1 = NM-16ESW
+        symbol = ethernet_switch
         x = 119.735064737
         y = 108.107647738
         z = 1.0
@@ -157,6 +219,20 @@ version = 0.8.7
         sparsemem = True
         ghostios = True
         chassis = 3640
+    [[Hub HUB7]]
+        1 = R7 f2/0
+        2 = R10 f0/0
+        3 = R11 f0/0
+        x = 137.948268172
+        y = 251.286363288
+        z = 1.0
+    [[Hub HUB6]]
+        1 = R7 f1/0
+        2 = R8 f0/0
+        3 = R9 f0/0
+        x = 355.737156777
+        y = 327.653895656
+        z = 1.0
     [[Hub HUB5]]
         1 = B6 f0/1
         2 = B7 f0/1
@@ -200,8 +276,9 @@ version = 0.8.7
         slot0 = NM-1FE-TX
         f0/0 = R4 f1/0
         slot1 = NM-1FE-TX
-        f1/0 = R8 f0/0
+        f1/0 = HUB6 1
         slot2 = NM-1FE-TX
+        f2/0 = HUB7 1
         x = 278.126983722
         y = 245.286363288
         z = 1.0
@@ -219,20 +296,6 @@ version = 0.8.7
         x = 368.636651714
         y = -40.3847763108
         z = 1.0
-    [[ROUTER B6]]
-        model = 3640
-        console = 2111
-        aux = 2511
-        cnfg = configs/B6.cfg
-        slot0 = NM-16ESW
-        f0/0 = HUB4 2
-        f0/1 = HUB5 1
-        slot1 = NM-16ESW
-        x = 633.094587877
-        y = -75.7401153701
-        z = 1.0
-        hx = -34.9510528701
-        hy = -12.2720779387
     [[ROUTER B7]]
         model = 3640
         console = 2112
@@ -243,6 +306,7 @@ version = 0.8.7
         f0/1 = HUB5 2
         f0/2 = R2 f1/0
         slot1 = NM-16ESW
+        symbol = ethernet_switch
         x = 464.803173955
         y = 81.2375900532
         z = 1.0
@@ -250,21 +314,58 @@ version = 0.8.7
     configs = configs
     m11 = 0.707106781187
     m22 = 0.707106781187
+    [[NOTE 1]]
+        text = "E: 10.24.1.128/25"
+        x = 111.722871427
+        y = 203.874675043
+        color = "#212121"
+    [[NOTE 2]]
+        text = "D: 10.92.27.32/27"
+        x = 362.038671967
+        y = 275.999566724
+        color = "#212121"
+    [[NOTE 3]]
+        text = "C: 10.92.27.104/30"
+        x = 381.83766184
+        y = 247.715295476
+        color = "#212121"
+    [[NOTE 4]]
+        text = "B: 10.24.3.0/24"
+        x = 420.021428025
+        y = -105.838095117
+        color = "#212121"
+    [[NOTE 5]]
+        text = "A: 10.24.1.0/25\n"
+        x = -50.9116882454
+        y = -78.9680374315
+        color = "#212121"
     [[SHAPE 1]]
+        type = rectangle
+        x = 43.8406204335
+        y = 205.060966544
+        width = 253.144227665
+        height = 166.87720036
+    [[SHAPE 2]]
+        type = rectangle
+        x = 302.641702348
+        y = 277.185858225
+        width = 234.759451354
+        height = 138.592929112
+    [[SHAPE 3]]
+        type = rectangle
+        x = 304.05591591
+        y = 209.303607231
+        width = 230.516810666
+        height = 62.2253967444
+    [[SHAPE 4]]
         type = rectangle
         x = 414.364573775
         y = -104.651803616
         width = 354.967604155
         height = 296.984848098
-    [[SHAPE 2]]
+    [[SHAPE 5]]
         type = rectangle
         x = -247.487373415
         y = -74.9533188057
         width = 634.981889505
         height = 243.244732728
-    [[SHAPE 3]]
-        type = rectangle
-        x = 267.286363288
-        y = 209.303607231
-        width = 267.286363288
-        height = 62.2253967444
