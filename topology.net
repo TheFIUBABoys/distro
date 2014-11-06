@@ -1,10 +1,10 @@
 autostart = False
 version = 0.8.7
 [127.0.0.1:7202]
-    workingdir = /tmp
+    workingdir = C:\Users\Lucas\AppData\Local\Temp
     udp = 10201
     [[3640]]
-        image = /home/tomas/Descargas/gns3-legacy-GNS3-0.8.7/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
+        image = C:\Users\Lucas\Downloads\archivos_dynamips\IOS\c3640-js-mz.124-10.bin
         idlepc = 0x60593c70
         sparsemem = True
         ghostios = True
@@ -13,17 +13,17 @@ version = 0.8.7
         model = 3640
         console = 2118
         aux = 2518
-        cnfg = configs/R8.cfg
+        cnfg = configs\R8.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB6 2
         x = 354.175756957
         y = 29.1930009
         z = 1.0
 [127.0.0.1:7203]
-    workingdir = /tmp
+    workingdir = C:\Users\Lucas\AppData\Local\Temp
     udp = 10301
     [[3640]]
-        image = /home/tomas/Descargas/gns3-legacy-GNS3-0.8.7/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
+        image = C:\Users\Lucas\Downloads\archivos_dynamips\IOS\c3640-js-mz.124-10.bin
         idlepc = 0x60593c70
         sparsemem = True
         ghostios = True
@@ -44,7 +44,7 @@ version = 0.8.7
         model = 3640
         console = 2123
         aux = 2523
-        cnfg = configs/R10.cfg
+        cnfg = configs\R10.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB7 2
         slot1 = NM-1FE-TX
@@ -56,7 +56,7 @@ version = 0.8.7
         model = 3640
         console = 2124
         aux = 2524
-        cnfg = configs/R11.cfg
+        cnfg = configs\R11.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB7 3
         slot1 = NM-1FE-TX
@@ -70,7 +70,7 @@ version = 0.8.7
         model = 3640
         console = 2164
         aux = 2599
-        cnfg = configs/R9.cfg
+        cnfg = configs\R9.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB6 3
         slot1 = NM-1FE-TX
@@ -82,7 +82,7 @@ version = 0.8.7
         model = 3640
         console = 2116
         aux = 2516
-        cnfg = configs/B6.cfg
+        cnfg = configs\B6.cfg
         slot0 = NM-16ESW
         f0/0 = HUB4 2
         f0/1 = HUB5 1
@@ -94,10 +94,10 @@ version = 0.8.7
         hx = -34.9510528701
         hy = -12.2720779387
 [127.0.0.1:7200]
-    workingdir = /tmp
+    workingdir = C:\Users\Lucas\AppData\Local\Temp
     udp = 10001
     [[3640]]
-        image = /home/tomas/Descargas/gns3-legacy-GNS3-0.8.7/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
+        image = C:\Users\Lucas\Downloads\archivos_dynamips\IOS\c3640-js-mz.124-10.bin
         idlepc = 0x60593c70
         sparsemem = True
         ghostios = True
@@ -129,7 +129,7 @@ version = 0.8.7
         model = 3640
         console = 2107
         aux = 2507
-        cnfg = configs/R1.cfg
+        cnfg = configs\R1.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB1 1
         slot1 = NM-1FE-TX
@@ -142,7 +142,7 @@ version = 0.8.7
         model = 3640
         console = 2109
         aux = 2509
-        cnfg = configs/R2.cfg
+        cnfg = configs\R2.cfg
         slot0 = NM-1FE-TX
         f0/0 = B4 f0/2
         slot1 = NM-1FE-TX
@@ -156,7 +156,7 @@ version = 0.8.7
         model = 3640
         console = 2122
         aux = 2522
-        cnfg = configs/B4.cfg
+        cnfg = configs\B4.cfg
         slot0 = NM-16ESW
         f0/0 = HUB2 3
         f0/1 = B3 f0/1
@@ -171,7 +171,7 @@ version = 0.8.7
         model = 3640
         console = 2115
         aux = 2515
-        cnfg = configs/B5.cfg
+        cnfg = configs\B5.cfg
         slot0 = NM-16ESW
         f0/0 = HUB1 3
         f0/1 = B2 f0/1
@@ -186,7 +186,7 @@ version = 0.8.7
         model = 3640
         console = 2113
         aux = 2513
-        cnfg = configs/B1.cfg
+        cnfg = configs\B1.cfg
         slot0 = NM-16ESW
         f0/0 = HUB1 2
         f0/1 = B2 f0/0
@@ -199,7 +199,7 @@ version = 0.8.7
         model = 3640
         console = 2117
         aux = 2517
-        cnfg = configs/B2.cfg
+        cnfg = configs\B2.cfg
         slot0 = NM-16ESW
         f0/0 = B1 f0/1
         f0/1 = B5 f0/1
@@ -216,7 +216,7 @@ version = 0.8.7
         model = 3640
         console = 2120
         aux = 2520
-        cnfg = configs/B3.cfg
+        cnfg = configs\B3.cfg
         slot0 = NM-16ESW
         f0/0 = HUB2 2
         f0/1 = B4 f0/1
@@ -229,10 +229,10 @@ version = 0.8.7
         hx = 20.2032760624
         hy = -27.8284271247
 [127.0.0.1:7201]
-    workingdir = /tmp
+    workingdir = C:\Users\Lucas\AppData\Local\Temp
     udp = 10101
     [[3640]]
-        image = /home/tomas/Descargas/gns3-legacy-GNS3-0.8.7/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
+        image = C:\Users\Lucas\Downloads\archivos_dynamips\IOS\c3640-js-mz.124-10.bin
         idlepc = 0x60593c70
         sparsemem = True
         ghostios = True
@@ -268,7 +268,7 @@ version = 0.8.7
         model = 3640
         console = 2114
         aux = 2514
-        cnfg = configs/R4.cfg
+        cnfg = configs\R4.cfg
         slot0 = NM-1FE-TX
         f0/0 = B7 f0/0
         slot1 = NM-1FE-TX
@@ -280,7 +280,7 @@ version = 0.8.7
         model = 3640
         console = 2119
         aux = 2519
-        cnfg = configs/R5.cfg
+        cnfg = configs\R5.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB5 3
         x = 655.403245742
@@ -290,7 +290,7 @@ version = 0.8.7
         model = 3640
         console = 2121
         aux = 2521
-        cnfg = configs/R7.cfg
+        cnfg = configs\R7.cfg
         slot0 = NM-1FE-TX
         f0/0 = R4 f1/0
         slot1 = NM-1FE-TX
@@ -304,7 +304,7 @@ version = 0.8.7
         model = 3640
         console = 2110
         aux = 2510
-        cnfg = configs/R3.cfg
+        cnfg = configs\R3.cfg
         slot0 = NM-1FE-TX
         f0/0 = B4 f0/3
         slot1 = NM-1FE-TX
@@ -318,7 +318,7 @@ version = 0.8.7
         model = 3640
         console = 2112
         aux = 2512
-        cnfg = configs/B7.cfg
+        cnfg = configs\B7.cfg
         slot0 = NM-16ESW
         f0/0 = R4 f0/0
         f0/1 = HUB5 2
@@ -329,10 +329,10 @@ version = 0.8.7
         y = -284.762409947
         z = 1.0
 [127.0.0.1:7206]
-    workingdir = /tmp
+    workingdir = C:\Users\Lucas\AppData\Local\Temp
     udp = 10601
     [[3640]]
-        image = /home/tomas/Descargas/gns3-legacy-GNS3-0.8.7/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
+        image = C:\Users\Lucas\Downloads\archivos_dynamips\IOS\c3640-js-mz.124-10.bin
         idlepc = 0x60593c70
         sparsemem = True
         ghostios = True
@@ -341,7 +341,7 @@ version = 0.8.7
         model = 3640
         console = 2130
         aux = 2530
-        cnfg = configs/R16.cfg
+        cnfg = configs\R16.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB13 3
         slot1 = NM-1FE-TX
@@ -352,7 +352,7 @@ version = 0.8.7
         model = 3640
         console = 2129
         aux = 2529
-        cnfg = configs/R15.cfg
+        cnfg = configs\R15.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB13 2
         slot1 = NM-1FE-TX
@@ -360,10 +360,10 @@ version = 0.8.7
         y = 208.0
         z = 1.0
 [127.0.0.1:7204]
-    workingdir = /tmp
+    workingdir = C:\Users\Lucas\AppData\Local\Temp
     udp = 10401
     [[3640]]
-        image = /home/tomas/Descargas/gns3-legacy-GNS3-0.8.7/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
+        image = C:\Users\Lucas\Downloads\archivos_dynamips\IOS\c3640-js-mz.124-10.bin
         idlepc = 0x60593c70
         sparsemem = True
         ghostios = True
@@ -372,7 +372,7 @@ version = 0.8.7
         model = 3640
         console = 2181
         aux = 2604
-        cnfg = configs/R17.cfg
+        cnfg = configs\R17.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB9 2
         x = -221.090403796
@@ -382,7 +382,7 @@ version = 0.8.7
         model = 3640
         console = 2126
         aux = 2526
-        cnfg = configs/R12.cfg
+        cnfg = configs\R12.cfg
         slot0 = NM-1FE-TX
         f0/0 = R11 f2/0
         slot1 = NM-1FE-TX
@@ -394,7 +394,7 @@ version = 0.8.7
         model = 3640
         console = 2125
         aux = 2525
-        cnfg = configs/R6.cfg
+        cnfg = configs\R6.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB2 4
         x = 30.6396103068
@@ -408,10 +408,10 @@ version = 0.8.7
         y = 273.913780286
         z = 1.0
 [127.0.0.1:7205]
-    workingdir = /tmp
+    workingdir = C:\Users\Lucas\AppData\Local\Temp
     udp = 10501
     [[3640]]
-        image = /home/tomas/Descargas/gns3-legacy-GNS3-0.8.7/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
+        image = C:\Users\Lucas\Downloads\archivos_dynamips\IOS\c3640-js-mz.124-10.bin
         idlepc = 0x60593c70
         sparsemem = True
         ghostios = True
@@ -420,7 +420,7 @@ version = 0.8.7
         model = 3640
         console = 2128
         aux = 2528
-        cnfg = configs/R14.cfg
+        cnfg = configs\R14.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB10 3
         slot1 = NM-1FE-TX
@@ -435,7 +435,7 @@ version = 0.8.7
         model = 3640
         console = 2127
         aux = 2527
-        cnfg = configs/R13.cfg
+        cnfg = configs\R13.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB10 2
         slot1 = NM-1FE-TX
@@ -458,142 +458,182 @@ version = 0.8.7
         z = 1.0
 [GNS3-DATA]
     configs = configs
-    m11 = 0.5
-    m22 = 0.5
+    m11 = 0.707106781187
+    m22 = 0.707106781187
     [[NOTE 1]]
         text = "I: 10.92.27.0/27"
-        x = -358.0
-        y = 169.5
+        x = -230.720779386
+        y = 260.009667992
         color = "#212121"
     [[NOTE 2]]
-        text = "K: 10.92.27.80/28"
-        x = -272.0
-        y = 419.5
-        color = "#212121"
-    [[NOTE 3]]
-        text = "A: 10.24.1.0/25\n"
-        x = -138.911688245
-        y = -444.968037431
-        color = "#212121"
-    [[NOTE 4]]
-        text = "D: 10.92.27.32/27"
-        x = 272.624458405
-        y = -88.5862197136
-        color = "#212121"
-    [[NOTE 5]]
-        text = "L: 192.168.8.0/24"
-        x = -66.87720036
-        y = 230.016810667
-        color = "#212121"
-    [[NOTE 6]]
         text = "E: 10.24.1.128/25"
         x = 54.8355697992
         y = -157.88268427
         color = "#212121"
-    [[NOTE 7]]
+    [[NOTE 3]]
         text = "B: 10.24.3.0/24"
         x = 332.021428025
         y = -471.838095117
         color = "#212121"
-    [[NOTE 8]]
+    [[NOTE 4]]
+        text = "L: 192.168.8.0/24"
+        x = -66.87720036
+        y = 230.016810667
+        color = "#212121"
+    [[NOTE 5]]
         text = "F: 10.92.27.64/28"
         x = 74.0
         y = 129.5
         color = "#212121"
-    [[NOTE 9]]
-        text = "G: 10.92.27.108/30"
-        x = -94.7523086789
-        y = 100.63708499
-        color = "#212121"
-    [[NOTE 10]]
-        text = "H: 10.92.27.128 /26"
-        x = -97.764501988
-        y = 543.643794389
-        color = "#212121"
-    [[NOTE 11]]
-        text = "C: 10.92.27.104/30"
-        x = 293.83766184
-        y = -118.284704524
-        color = "#212121"
-    [[NOTE 12]]
+    [[NOTE 6]]
         text = "S: 10.24.1.64/27"
         x = -270.114790413
         y = -20.9852813742
         color = "#212121"
+    [[NOTE 7]]
+        text = "J: 10.92.27.96 /29 "
+        x = -530.33008589
+        y = 354.281312655
+    [[NOTE 8]]
+        text = "G: 10.92.27.108/30"
+        x = -94.7523086789
+        y = 100.63708499
+        color = "#212121"
+    [[NOTE 9]]
+        text = "C: 10.92.27.104/30"
+        x = 293.83766184
+        y = -118.284704524
+        color = "#212121"
+    [[NOTE 10]]
+        text = "OSPF"
+        x = 268.700576851
+        y = 241.144227665
+    [[NOTE 11]]
+        text = "RIP"
+        x = -425.678282274
+        y = -499.903679019
+    [[NOTE 12]]
+        text = "Static"
+        x = 528.915872328
+        y = -137.865007051
+    [[NOTE 13]]
+        text = "H: 10.92.27.128 /26"
+        x = -97.764501988
+        y = 543.643794389
+        color = "#212121"
+    [[NOTE 14]]
+        text = "K: 10.92.27.80/28"
+        x = -272.0
+        y = 419.5
+        color = "#212121"
+    [[NOTE 15]]
+        text = "A: 10.24.1.0/25\n"
+        x = -138.911688245
+        y = -444.968037431
+        color = "#212121"
+    [[NOTE 16]]
+        text = "D: 10.92.27.32/27"
+        x = 272.624458405
+        y = -88.5862197136
+        color = "#212121"
     [[SHAPE 1]]
         type = rectangle
-        x = 75.767766953
-        y = 10.1715728753
-        width = 135.657160622
-        height = 142.0
+        x = -470.93311627
+        y = -158.391918986
+        width = 1197.83888733
+        height = 356.381817718
+        z = 1.0
     [[SHAPE 2]]
-        type = rectangle
-        x = -332.65894629
-        y = -462.166522241
-        width = 634.981889505
-        height = 243.244732728
-    [[SHAPE 3]]
-        type = rectangle
-        x = 326.364573775
-        y = -470.651803616
-        width = 354.967604155
-        height = 296.984848098
-    [[SHAPE 4]]
-        type = rectangle
-        x = 216.05591591
-        y = -156.696392769
-        width = 230.516810666
-        height = 62.2253967444
-    [[SHAPE 5]]
-        type = rectangle
-        x = 214.641702348
-        y = -88.814141775
-        width = 234.759451354
-        height = 138.592929112
-    [[SHAPE 6]]
-        type = rectangle
-        x = 28.2842712474
-        y = -160.939033456
-        width = 180.700576851
-        height = 166.87720036
-    [[SHAPE 7]]
         type = rectangle
         x = -326.683332908
         y = -90.5096679918
         width = 349.310749906
         height = 98.5857864373
+    [[SHAPE 3]]
+        type = rectangle
+        x = 75.767766953
+        y = 10.1715728753
+        width = 135.657160622
+        height = 142.0
+    [[SHAPE 4]]
+        type = rectangle
+        x = -560.0285707
+        y = 335.168614282
+        width = 200.0
+        height = 80.6101730553
+    [[SHAPE 5]]
+        type = rectangle
+        x = -598.212336884
+        y = 199.404112295
+        width = 1327.94653507
+        height = 345.068109219
+    [[SHAPE 6]]
+        type = rectangle
+        x = 28.2842712474
+        y = -154.149278299
+        width = 180.700576851
+        height = 160.087445203
+    [[SHAPE 7]]
+        type = rectangle
+        x = -468.104689145
+        y = -516.187950266
+        width = 1196.42467377
+        height = 359.210244843
     [[SHAPE 8]]
         type = rectangle
-        x = -398.0
-        y = 166.0
-        width = 286.0
-        height = 232.0
-        z = -1.0
+        x = 216.05591591
+        y = -156.696392769
+        width = 230.516810666
+        height = 62.2253967444
     [[SHAPE 9]]
         type = rectangle
-        x = -314.0
-        y = 408.0
-        width = 200.0
-        height = 48.0
-        z = -1.0
+        x = 214.641702348
+        y = -88.814141775
+        width = 234.759451354
+        height = 138.592929112
     [[SHAPE 10]]
+        type = rectangle
+        x = -332.65894629
+        y = -462.166522241
+        width = 634.981889505
+        height = 243.244732728
+    [[SHAPE 11]]
+        type = rectangle
+        x = 326.364573775
+        y = -470.651803616
+        width = 354.967604155
+        height = 296.984848098
+    [[SHAPE 12]]
+        type = rectangle
+        x = -357.79603128
+        y = 166.0
+        width = 245.79603128
+        height = 232.0
+    [[SHAPE 13]]
         type = rectangle
         x = -102.0
         y = 11.313708499
         width = 169.882250993
         height = 193.747258045
         z = -1.0
-    [[SHAPE 11]]
+    [[SHAPE 14]]
         type = rectangle
         x = -108.0
         y = 408.465078838
         width = 177.539105243
         height = 182.433549546
         z = -1.0
-    [[SHAPE 12]]
+    [[SHAPE 15]]
         type = rectangle
         x = -104.0
         y = 210.717820793
         width = 177.539105243
         height = 192.333044483
+        z = -1.0
+    [[SHAPE 16]]
+        type = rectangle
+        x = -314.0
+        y = 408.0
+        width = 200.0
+        height = 48.0
         z = -1.0
