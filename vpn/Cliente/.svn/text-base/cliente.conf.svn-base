@@ -1,0 +1,17 @@
+#/etc/openvpn/cliente.conf
+
+# dispositivo tap
+dev tap
+
+tun-mtu 1500
+
+# enable LZO compression
+comp-lzo
+# ping cada 10 segs
+ping 10
+# compresión lzo
+comp-lzo
+# verbose moderado, callar mas de 10 mensajes iguales
+verb 4
+mute 10
+

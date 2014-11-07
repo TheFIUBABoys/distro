@@ -1,0 +1,83 @@
+K 25
+svn:wc:ra_dav:version-url
+V 61
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor
+END
+hostA.conf
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor/hostA.conf
+END
+telServerC.conf
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/68/Vpn/Servidor/telServerC.conf
+END
+hostB.conf
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor/hostB.conf
+END
+stopTap.sh
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor/stopTap.sh
+END
+ftpServer.conf
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor/ftpServer.conf
+END
+hostC.conf
+K 25
+svn:wc:ra_dav:version-url
+V 72
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor/hostC.conf
+END
+telServerE.conf
+K 25
+svn:wc:ra_dav:version-url
+V 77
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/68/Vpn/Servidor/telServerE.conf
+END
+webServer.conf
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/68/Vpn/Servidor/webServer.conf
+END
+dns1.conf
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor/dns1.conf
+END
+dns2.conf
+K 25
+svn:wc:ra_dav:version-url
+V 71
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor/dns2.conf
+END
+promiscUp.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor/promiscUp.sh
+END
+dnsRoot.conf
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor/dnsRoot.conf
+END
+iniciarTap.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/82/Vpn/Servidor/iniciarTap.sh
+END

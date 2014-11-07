@@ -1,0 +1,22 @@
+#/etc/openvpn/server.conf
+
+# DNS1
+
+# Importante, una vez creado el tap, se debe ponerlo en modo promiscuo y levantar la interfazmediante:
+# ifconfig tap promisc up (no se debe hacer en el archivo de configuracion, si no en un shell con permisos de root)
+
+# dispositivo de tunel
+dev tap1
+
+# Puerto: configurar un pueto distinto para cada Tap
+port 1195
+
+# Usuario bajo el cual se ejecutará la VPN
+;user nobody
+;group nobody
+
+# Opciones, comprimir con lzo, ping cada 15 segs, verbose 1 (bajo)
+comp-lzo
+ping 15
+verb 1
+
