@@ -10,11 +10,16 @@ br="br0"
 
 # Define list of TAP interfaces to be bridged,
 # for example tap="tap0 tap1 tap2".
+<<<<<<< HEAD
 tap="tap1"
+=======
+tap="tap0 tap1 tap2"
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
 
 # Define physical ethernet interface to be bridged
 # with TAP interface(s) above.
 eth="eth0"
+<<<<<<< HEAD
 eth_ip="192.168.2.115"
 eth_netmask="255.255.255.0"
 eth_broadcast="192.168.2.255"
@@ -24,6 +29,19 @@ eth_broadcast="192.168.2.255"
 #done
 
 openvpn --mktun --dev tap1 --ifconfig 10.24.1.5 255.255.255.0
+=======
+eth_ip="192.168.8.4"
+eth_netmask="255.255.255.0"
+eth_broadcast="192.168.8.255"
+
+for t in $tap; do
+    openvpn --mktun --dev $t
+done
+
+#openvpn --mktun --dev tap0 --ifconfig 10.111.25.193/26
+#openvpn --mktun --dev tap1 --ifconfig 10.111.26.193 255.255.255.192
+#openvpn --mktun --dev tap2 --ifconfig 10.111.27.193 255.255.255.192
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
 
 
 brctl addbr $br

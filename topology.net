@@ -4,8 +4,13 @@ version = 0.8.7
     workingdir = /tmp
     udp = 10201
     [[3640]]
+<<<<<<< HEAD
         image = /media/joaquin/DA2A90422A901E17/Facultá/Computación/Introducción a los Sistemas Distribuidos/archivos_dynamips/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
         idlepc = 0xffffffff88000000
+=======
+        image = /Users/gonchub/Downloads/c3640-js-mz.124-10.bin
+        idlepc = 0x60593c70
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         sparsemem = True
         chassis = 3640
     [[ROUTER R8]]
@@ -22,8 +27,13 @@ version = 0.8.7
     workingdir = /tmp
     udp = 10301
     [[3640]]
+<<<<<<< HEAD
         image = /media/joaquin/DA2A90422A901E17/Facultá/Computación/Introducción a los Sistemas Distribuidos/archivos_dynamips/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
         idlepc = 0xffffffff88000000
+=======
+        image = /Users/gonchub/Downloads/c3640-js-mz.124-10.bin
+        idlepc = 0x60593c70
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         sparsemem = True
         chassis = 3640
     [[Hub HUB9]]
@@ -59,8 +69,8 @@ version = 0.8.7
         f0/0 = HUB7 3
         slot1 = NM-1FE-TX
         f1/0 = HUB9 1
-        slot2 = NM-1FE-TX
-        f2/0 = R12 f0/0
+        slot2 = NM-4T
+        s2/0 = R12 s0/0
         x = -2.2060607607
         y = -16.061833096
         z = 1.0
@@ -95,8 +105,13 @@ version = 0.8.7
     workingdir = /tmp
     udp = 10001
     [[3640]]
+<<<<<<< HEAD
         image = /media/joaquin/DA2A90422A901E17/Facultá/Computación/Introducción a los Sistemas Distribuidos/archivos_dynamips/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
         idlepc = 0xffffffff88000000
+=======
+        image = /Users/gonchub/Downloads/c3640-js-mz.124-10.bin
+        idlepc = 0x60593c70
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         sparsemem = True
         chassis = 3640
     [[Hub HUB3]]
@@ -123,6 +138,26 @@ version = 0.8.7
         x = -316.21825407
         y = -365.04163056
         z = 1.0
+    [[FRSW FR3]]
+        1:105 = 5:501
+        1:106 = 6:601
+        1:107 = 7:701
+        5:501 = 1:105
+        5:506 = 6:605
+        5:507 = 7:705
+        6:601 = 1:106
+        6:605 = 5:506
+        6:607 = 7:706
+        7:701 = 1:107
+        7:705 = 5:507
+        7:706 = 6:607
+        1 = R1 s1/0
+        5 = R15 s1/0
+        6 = R6 s1/0
+        7 = R17 s1/0
+        x = -513.403679019
+        y = -36.2279220614
+        z = 1.0
     [[ROUTER R1]]
         model = 3640
         console = 2107
@@ -130,7 +165,8 @@ version = 0.8.7
         cnfg = configs/R1.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB1 1
-        slot1 = NM-1FE-TX
+        slot1 = NM-4T
+        s1/0 = FR3 1
         slot2 = NM-1FE-TX
         slot3 = NM-1FE-TX
         x = -310.318759133
@@ -230,8 +266,13 @@ version = 0.8.7
     workingdir = /tmp
     udp = 10101
     [[3640]]
+<<<<<<< HEAD
         image = /media/joaquin/DA2A90422A901E17/Facultá/Computación/Introducción a los Sistemas Distribuidos/archivos_dynamips/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
         idlepc = 0xffffffff88000000
+=======
+        image = /Users/gonchub/Downloads/c3640-js-mz.124-10.bin
+        idlepc = 0x60593c70
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         sparsemem = True
         chassis = 3640
     [[Hub HUB7]]
@@ -268,8 +309,8 @@ version = 0.8.7
         cnfg = configs/R4.cfg
         slot0 = NM-1FE-TX
         f0/0 = B7 f0/0
-        slot1 = NM-1FE-TX
-        f1/0 = R7 f0/0
+        slot1 = NM-4T
+        s1/0 = R7 s0/0
         x = 375.388960393
         y = -180.110606331
         z = 2.0
@@ -288,8 +329,13 @@ version = 0.8.7
         console = 2121
         aux = 2521
         cnfg = configs/R7.cfg
+<<<<<<< HEAD
         slot0 = NM-1FE-TX
         f0/0 = R4 f1/0
+=======
+        slot0 = NM-4T
+        s0/0 = R4 s1/0
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         slot1 = NM-1FE-TX
         f1/0 = HUB6 1
         slot2 = NM-1FE-TX
@@ -329,8 +375,13 @@ version = 0.8.7
     workingdir = /tmp
     udp = 10601
     [[3640]]
+<<<<<<< HEAD
         image = /media/joaquin/DA2A90422A901E17/Facultá/Computación/Introducción a los Sistemas Distribuidos/archivos_dynamips/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
         idlepc = 0xffffffff88000000
+=======
+        image = /Users/gonchub/Downloads/c3640-js-mz.124-10.bin
+        idlepc = 0x60593c70
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         sparsemem = True
         chassis = 3640
     [[ROUTER R16]]
@@ -351,7 +402,8 @@ version = 0.8.7
         cnfg = configs/R15.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB13 2
-        slot1 = NM-1FE-TX
+        slot1 = NM-4T
+        s1/0 = FR3 5
         x = -275.0
         y = 208.0
         z = 1.0
@@ -359,8 +411,13 @@ version = 0.8.7
     workingdir = /tmp
     udp = 10401
     [[3640]]
+<<<<<<< HEAD
         image = /media/joaquin/DA2A90422A901E17/Facultá/Computación/Introducción a los Sistemas Distribuidos/archivos_dynamips/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
         idlepc = 0xffffffff88000000
+=======
+        image = /Users/gonchub/Downloads/c3640-js-mz.124-10.bin
+        idlepc = 0x60593c70
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         sparsemem = True
         chassis = 3640
     [[ROUTER R17]]
@@ -370,6 +427,8 @@ version = 0.8.7
         cnfg = configs/R17.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB9 2
+        slot1 = NM-4T
+        s1/0 = FR3 7
         x = -221.090403796
         y = -68.6690475583
         z = 1.0
@@ -378,8 +437,13 @@ version = 0.8.7
         console = 2126
         aux = 2526
         cnfg = configs/R12.cfg
+<<<<<<< HEAD
         slot0 = NM-1FE-TX
         f0/0 = R11 f2/0
+=======
+        slot0 = NM-4T
+        s0/0 = R11 s2/0
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         slot1 = NM-1FE-TX
         f1/0 = HUB10 1
         x = -4.71572875254
@@ -392,6 +456,8 @@ version = 0.8.7
         cnfg = configs/R6.cfg
         slot0 = NM-1FE-TX
         f0/0 = HUB2 4
+        slot1 = NM-4T
+        s1/0 = FR3 6
         x = 30.6396103068
         y = -484.447834896
         z = 1.0
@@ -406,8 +472,13 @@ version = 0.8.7
     workingdir = /tmp
     udp = 10501
     [[3640]]
+<<<<<<< HEAD
         image = /media/joaquin/DA2A90422A901E17/Facultá/Computación/Introducción a los Sistemas Distribuidos/archivos_dynamips/archivos_dynamips/IOS/c3640-js-mz.124-10.bin
         idlepc = 0xffffffff88000000
+=======
+        image = /Users/gonchub/Downloads/c3640-js-mz.124-10.bin
+        idlepc = 0x60593c70
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         sparsemem = True
         chassis = 3640
     [[ROUTER R14]]
@@ -478,7 +549,11 @@ version = 0.8.7
         text = "J: 10.92.27.96 /29 "
         x = -530.33008589
         y = 354.281312655
+<<<<<<< HEAD
         color = "#3c3c3c"
+=======
+        color = "#212121"
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
     [[NOTE 6]]
         text = "G: 10.92.27.108/30"
         x = -94.7523086789
@@ -502,6 +577,7 @@ version = 0.8.7
     [[NOTE 10]]
         text = "H: 10.92.27.128 /26"
         x = -97.764501988
+<<<<<<< HEAD
         y = 515.359523142
         color = "#212121"
     [[NOTE 11]]
@@ -509,16 +585,33 @@ version = 0.8.7
         x = -425.678282274
         y = -499.903679019
         color = "#3c3c3c"
+=======
+        y = 543.643794389
+        color = "#212121"
+    [[NOTE 11]]
+        text = "RIP"
+        x = -407.678282274
+        y = -503.903679019
+        color = "#212121"
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
     [[NOTE 12]]
         text = "Static"
         x = 528.915872328
         y = -137.865007051
+<<<<<<< HEAD
         color = "#3c3c3c"
+=======
+        color = "#212121"
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
     [[NOTE 13]]
         text = "OSPF"
         x = 268.700576851
         y = 241.144227665
+<<<<<<< HEAD
         color = "#3c3c3c"
+=======
+        color = "#212121"
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
     [[NOTE 14]]
         text = "K: 10.92.27.80/28"
         x = -272.0
@@ -541,13 +634,13 @@ version = 0.8.7
         connections = HUB3:3:nio_gen_eth:tap1
     [[SHAPE 1]]
         type = rectangle
-        x = -470.93311627
-        y = -158.391918986
-        width = 1197.83888733
-        height = 356.381817718
-        z = 1.0
+        x = 75.767766953
+        y = 10.1715728753
+        width = 135.657160622
+        height = 142.0
     [[SHAPE 2]]
         type = rectangle
+<<<<<<< HEAD
         x = 75.767766953
         y = 10.1715728753
         width = 135.657160622
@@ -559,13 +652,33 @@ version = 0.8.7
         width = 1196.42467377
         height = 359.210244843
     [[SHAPE 4]]
+=======
+        x = -450.104689145
+        y = -524.187950266
+        width = 1196.42467377
+        height = 359.210244843
+    [[SHAPE 3]]
+        type = rectangle
+        x = 28.2842712474
+        y = -154.149278299
+        width = 180.700576851
+        height = 160.087445203
+    [[SHAPE 4]]
+        type = rectangle
+        x = -326.683332908
+        y = -90.5096679918
+        width = 349.310749906
+        height = 98.5857864373
+    [[SHAPE 5]]
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         type = rectangle
         x = -560.0285707
         y = 335.168614282
         width = 200.0
         height = 80.6101730553
-    [[SHAPE 5]]
+    [[SHAPE 6]]
         type = rectangle
+<<<<<<< HEAD
         x = -326.683332908
         y = -90.5096679918
         width = 349.310749906
@@ -574,57 +687,71 @@ version = 0.8.7
         type = rectangle
         x = -605.283404696
         y = 202.23253942
+=======
+        x = -584.212336884
+        y = 203.404112295
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         width = 1327.94653507
         height = 345.068109219
     [[SHAPE 7]]
         type = rectangle
+<<<<<<< HEAD
         x = 28.2842712474
         y = -154.149278299
         width = 180.700576851
         height = 160.087445203
     [[SHAPE 8]]
         type = rectangle
+=======
+>>>>>>> b173363897a4bb81722b0ebec71bbadc42ddb974
         x = 216.05591591
         y = -156.696392769
         width = 230.516810666
         height = 62.2253967444
-    [[SHAPE 9]]
+    [[SHAPE 8]]
         type = rectangle
         x = 214.641702348
         y = -88.814141775
         width = 234.759451354
         height = 138.592929112
-    [[SHAPE 10]]
+    [[SHAPE 9]]
         type = rectangle
         x = -332.65894629
         y = -462.166522241
         width = 634.981889505
         height = 243.244732728
-    [[SHAPE 11]]
+    [[SHAPE 10]]
         type = rectangle
         x = 326.364573775
         y = -470.651803616
         width = 354.967604155
         height = 296.984848098
-    [[SHAPE 12]]
+    [[SHAPE 11]]
         type = rectangle
         x = -357.79603128
         y = 166.0
         width = 245.79603128
         height = 232.0
-    [[SHAPE 13]]
+    [[SHAPE 12]]
         type = rectangle
         x = -314.0
         y = 408.0
         width = 200.0
         height = 48.0
         z = -1.0
-    [[SHAPE 14]]
+    [[SHAPE 13]]
         type = rectangle
         x = -108.0
         y = 408.465078838
         width = 177.539105243
         height = 182.433549546
+        z = -1.0
+    [[SHAPE 14]]
+        type = rectangle
+        x = -102.0
+        y = 11.313708499
+        width = 169.882250993
+        height = 193.747258045
         z = -1.0
     [[SHAPE 15]]
         type = rectangle
