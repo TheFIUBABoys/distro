@@ -1,0 +1,77 @@
+K 25
+svn:wc:ra_dav:version-url
+V 60
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente
+END
+iniciarDNSRoot.sh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarDNSRoot.sh
+END
+iniciarFtp.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarFtp.sh
+END
+iniciarWeb.sh
+K 25
+svn:wc:ra_dav:version-url
+V 74
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarWeb.sh
+END
+iniciarHostA.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarHostA.sh
+END
+iniciarTelnetC.sh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarTelnetC.sh
+END
+cliente.conf
+K 25
+svn:wc:ra_dav:version-url
+V 73
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/cliente.conf
+END
+iniciarHostB.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarHostB.sh
+END
+iniciarHostC.sh
+K 25
+svn:wc:ra_dav:version-url
+V 76
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarHostC.sh
+END
+iniciarTelnetE.sh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarTelnetE.sh
+END
+iniciarCliente.sh
+K 25
+svn:wc:ra_dav:version-url
+V 78
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarCliente.sh
+END
+iniciarDNS1.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarDNS1.sh
+END
+iniciarDNS2.sh
+K 25
+svn:wc:ra_dav:version-url
+V 75
+/svn/ramiro-distro_tp_2012_grupo_one/!svn/ver/83/Vpn/Cliente/iniciarDNS2.sh
+END
