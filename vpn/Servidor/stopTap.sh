@@ -5,6 +5,3 @@ ifconfig tap4 down
 ifconfig tap5 down
 ifconfig tap6 down
 ifconfig tap7 down
-ifconfig tap8 down
-ifconfig tap9 down
-ifconfig tap10 down
