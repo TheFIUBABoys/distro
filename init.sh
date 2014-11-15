@@ -68,10 +68,10 @@ BROADCAST_FTP="10.92.27.63"
 MASCARA_FTP="255.255.255.224"
 
 # DIRECCIONES VRRP
-IP_VRRP_A = "10.24.1.6"
-IP_VRRP_B = "10.24.3.5"
-IP_VRRP_H = "10.92.27.132"
-IP_VRRP_L = "192.168.8.4"
+IP_VRRP_A="10.24.1.6"
+IP_VRRP_B="10.24.3.5"
+IP_VRRP_H="10.92.27.132"
+IP_VRRP_L="192.168.8.4"
 
 
 #funcion de instalacion por si necesitamos ---> verificar_dependencia_e_instalar telnetd
@@ -135,11 +135,11 @@ function HOSTA {
 	#CONFIGURACION INTERFACES
 	ifconfig $interfaz $IP_A broadcast $BROADCAST_A netmask $MASCARA_A
 	#RUTEO ESTATICO
-	route add -net $RED_B netmask $MASK_24 gw IP_VRRP_A dev $interfaz
-	route add -net $RED_C netmask $MASK_30 gw IP_VRRP_A dev $interfaz
-	route add -net $RED_D netmask $MASK_27 gw IP_VRRP_A dev $interfaz
-	route add -net $RED_E netmask $MASK_25 gw IP_VRRP_A dev $interfaz
-	route add -net $RED_F netmask $MASK_28 gw IP_VRRP_A dev $interfaz
+	route add -net $RED_B netmask $MASK_24 gw $IP_VRRP_A dev $interfaz
+	route add -net $RED_C netmask $MASK_30 gw $IP_VRRP_A dev $interfaz
+	route add -net $RED_D netmask $MASK_27 gw $IP_VRRP_A dev $interfaz
+	route add -net $RED_E netmask $MASK_25 gw $IP_VRRP_A dev $interfaz
+	route add -net $RED_F netmask $MASK_28 gw $IP_VRRP_A dev $interfaz
 	route add -net $RED_G netmask $MASK_30 gw "10.24.1.1" dev $interfaz
 	route add -net $RED_H netmask $MASK_26 gw "10.24.1.1" dev $interfaz
 	route add -net $RED_I netmask $MASK_27 gw "10.24.1.1" dev $interfaz
@@ -161,24 +161,24 @@ function HOSTB {
 	ifconfig $interfaz $IP_B broadcast $BROADCAST_B netmask $MASCARA_B
 
 	#RUTEO ESTATICO
-	route add -net $RED_A netmask $MASK_24 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_B netmask $MASK_24 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_C netmask $MASK_30 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_D netmask $MASK_27 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_E netmask $MASK_25 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_F netmask $MASK_28 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_G netmask $MASK_30 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_I netmask $MASK_27 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_J netmask $MASK_29 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_K netmask $MASK_28 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_L netmask $MASK_24 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_M netmask $MASK_30 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_N netmask $MASK_30 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_O netmask $MASK_30 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_P netmask $MASK_30 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_Q netmask $MASK_30 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_R netmask $MASK_30 gw IP_VRRP_H dev $interfaz
-	route add -net $RED_S netmask $MASK_27 gw IP_VRRP_H dev $interfaz
+	route add -net $RED_A netmask $MASK_24 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_B netmask $MASK_24 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_C netmask $MASK_30 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_D netmask $MASK_27 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_E netmask $MASK_25 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_F netmask $MASK_28 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_G netmask $MASK_30 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_I netmask $MASK_27 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_J netmask $MASK_29 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_K netmask $MASK_28 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_L netmask $MASK_24 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_M netmask $MASK_30 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_N netmask $MASK_30 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_O netmask $MASK_30 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_P netmask $MASK_30 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_Q netmask $MASK_30 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_R netmask $MASK_30 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_S netmask $MASK_27 gw $IP_VRRP_H dev $interfaz
 
 
 }
@@ -188,23 +188,23 @@ function HOSTC {
 	ifconfig $interfaz $IP_C broadcast $BROADCAST_C netmask $MASCARA_C
 
 	#RUTEO ESTATICO
-	route add -net $RED_A netmask $MASK_24 gw IP_VRRP_B dev $interfaz
+	route add -net $RED_A netmask $MASK_24 gw $IP_VRRP_B dev $interfaz
 	route add -net $RED_C netmask $MASK_30 gw "10.24.3.3" dev $interfaz
 	route add -net $RED_D netmask $MASK_27 gw "10.24.3.3" dev $interfaz
 	route add -net $RED_E netmask $MASK_25 gw "10.24.3.3" dev $interfaz
 	route add -net $RED_F netmask $MASK_28 gw "10.24.3.3" dev $interfaz
 	route add -net $RED_G netmask $MASK_30 gw "10.24.3.3" dev $interfaz
-	route add -net $RED_H netmask $MASK_26 gw IP_VRRP_B dev $interfaz
-	route add -net $RED_I netmask $MASK_27 gw IP_VRRP_B dev $interfaz
-	route add -net $RED_J netmask $MASK_29 gw IP_VRRP_B dev $interfaz
-	route add -net $RED_K netmask $MASK_28 gw IP_VRRP_B dev $interfaz
-	route add -net $RED_L netmask $MASK_24 gw IP_VRRP_B dev $interfaz
-	route add -net $RED_M netmask $MASK_30 gw IP_VRRP_B dev $interfaz
-	route add -net $RED_N netmask $MASK_30 gw IP_VRRP_B dev $interfaz
-	route add -net $RED_O netmask $MASK_30 gw IP_VRRP_B dev $interfaz
-	route add -net $RED_P netmask $MASK_30 gw IP_VRRP_B dev $interfaz
-	route add -net $RED_Q netmask $MASK_30 gw IP_VRRP_B dev $interfaz
-	route add -net $RED_R netmask $MASK_30 gw IP_VRRP_B dev $interfaz
+	route add -net $RED_H netmask $MASK_26 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_I netmask $MASK_27 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_J netmask $MASK_29 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_K netmask $MASK_28 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_L netmask $MASK_24 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_M netmask $MASK_30 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_N netmask $MASK_30 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_O netmask $MASK_30 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_P netmask $MASK_30 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_Q netmask $MASK_30 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_R netmask $MASK_30 gw $IP_VRRP_B dev $interfaz
 	route add -net $RED_S netmask $MASK_27 gw "10.24.3.3" dev $interfaz
 
 
