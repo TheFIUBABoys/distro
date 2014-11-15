@@ -16,7 +16,6 @@ version = 0.8.7
         slot0 = NM-1FE-TX
         f0/0 = HUB6 2
         slot1 = NM-1FE-TX
-        f1/0 = INTERNET f1/0
         x = 354.175756957
         y = 29.1930009
         z = 1.0
@@ -304,7 +303,6 @@ version = 0.8.7
         slot0 = NM-1FE-TX
         f0/0 = HUB5 3
         slot1 = NM-1FE-TX
-        f1/0 = INTERNET f0/0
         x = 655.403245742
         y = -341.330952442
         z = 2.0
@@ -395,13 +393,10 @@ version = 0.8.7
         aux = 2592
         cnfg = configs\INTERNET.cfg
         slot0 = NM-1FE-TX
-        f0/0 = R5 f1/0
         slot1 = NM-1FE-TX
-        f1/0 = R8 f1/0
         slot2 = NM-1FE-TX
-        f2/0 = R12 f2/0
-        x = 751.0
-        y = -60.0
+        x = 821.0
+        y = -40.0
         z = 1.0
 [127.0.0.1:7204]
     workingdir = C:\Users\Lucas\AppData\Local\Temp
@@ -433,7 +428,6 @@ version = 0.8.7
         slot1 = NM-1FE-TX
         f1/0 = HUB10 1
         slot2 = NM-1FE-TX
-        f2/0 = INTERNET f2/0
         x = -4.71572875254
         y = 180.23253942
         z = 1.0
@@ -503,6 +497,39 @@ version = 0.8.7
         2 = R14 f2/0
         x = -78.4264068712
         y = 486.045814642
+        z = 1.0
+[127.0.0.1:7208]
+    workingdir = C:\Users\Lucas\AppData\Local\Temp
+    udp = 10801
+    [[3640]]
+        image = C:\Users\Lucas\Downloads\archivos_dynamips\IOS\c3640-js-mz.124-10.bin
+        idlepc = 0x60593c70
+        sparsemem = True
+        ghostios = True
+        chassis = 3640
+    [[ROUTER A]]
+        model = 3640
+        console = 2126
+        aux = 2531
+        cnfg = configs\A.cfg
+        x = 688.0
+        y = -56.0
+        z = 1.0
+    [[ROUTER C]]
+        model = 3640
+        console = 2131
+        aux = 2532
+        cnfg = configs\C.cfg
+        x = 803.5
+        y = -154.932667397
+        z = 1.0
+    [[ROUTER B]]
+        model = 3640
+        console = 2132
+        aux = 2533
+        cnfg = configs\B.cfg
+        x = 775.5
+        y = 66.9326673974
         z = 1.0
 [GNS3-DATA]
     configs = configs
@@ -609,7 +636,7 @@ version = 0.8.7
         y = -172.906637612
         z = 1.0
     [[Cloud FTP]]
-        x = 484.5
+        x = 476.5
         y = -79.0
         z = 1.0
     [[Cloud C5]]
