@@ -31,7 +31,7 @@ RED_O="172.43.0.72" #/30
 RED_P="172.43.0.76" #/30
 RED_Q="172.43.0.80" #/30
 RED_R="172.43.0.84" #/30
-RED_S="10.24.1.64" #/27
+RED_S="10.10.5.0" #/27
 
 # IP HOST A
 IP_A="10.24.1.5"
@@ -237,19 +237,6 @@ function WEBSERVER {
 	route add -net $RED_Q netmask $MASK_30 gw "192.168.8.3" dev $interfaz
 	route add -net $RED_R netmask $MASK_30 gw "192.168.8.3" dev $interfaz
 	route add -net $RED_S netmask $MASK_27 gw "192.168.8.1" dev $interfaz
-
-	validate_apache2
-	if [ $? -eq 1 ]; then
-		echo "Configurando Web Server ..."
-		cp -r ./servers/web/index.html /var/www/
-		cp -r ./servers/web/apache2.conf /etc/apache2/	
-
-		# Arranca el proceso de apache2
-		/etc/init.d/apache2 restart
-		echo "OK! Web Server configurado."
-	else
-		echo "No se pudo configurar el Web Server correctamente."
-	fi
 }
 
 function FTPSERVER {
@@ -294,33 +281,33 @@ function FTPSERVER {
 function TELSERVER {
 	#Este IGNORA las interfaces que recibe por parametro
 	#CONFIGURACION INTERFACES
-	interfazC="tap0"
-	interfazE="tap1"
-	ifconfig $interfazC $IP_TELSERVER_C broadcast $BROADCAST_TELNETC netmask $MASCARA_TELNETC
-
+	interfazE="tap0"
+	interfazS="tap1"
 	ifconfig $interfazE $IP_TELSERVER_E broadcast $BROADCAST_TELNETE netmask $MASCARA_TELNETE
+
+	ifconfig $interfazS $IP_TELSERVER_S broadcast $BROADCAST_TELNETS netmask $MASCARA_TELNETS
 	echo $interfazE
-	echo $interfazC
+	echo $interfazS
 	#RUTEO ESTATICO
 
-	route add -net $RED_A netmask $MASK_24 gw "10.24.1.130" dev $interfaz
-	route add -net $RED_B netmask $MASK_24 gw "10.24.1.130" dev $interfaz
-	route add -net $RED_C netmask $MASK_30 gw "10.24.1.130" dev $interfaz
-	route add -net $RED_D netmask $MASK_27 gw "10.24.1.130" dev $interfaz
-	route add -net $RED_F netmask $MASK_28 gw "10.24.1.131" dev $interfaz
-	route add -net $RED_G netmask $MASK_30 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_H netmask $MASK_26 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_I netmask $MASK_27 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_J netmask $MASK_29 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_K netmask $MASK_28 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_L netmask $MASK_24 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_M netmask $MASK_30 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_N netmask $MASK_30 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_O netmask $MASK_30 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_P netmask $MASK_30 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_Q netmask $MASK_30 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_R netmask $MASK_30 gw "10.24.1.132" dev $interfaz
-	route add -net $RED_S netmask $MASK_27 gw "10.24.1.132" dev $interfaz
+	route add -net $RED_A netmask $MASK_24 gw "10.24.1.130" dev $interfazE
+	route add -net $RED_B netmask $MASK_24 gw "10.24.1.130" dev $interfazE
+	route add -net $RED_C netmask $MASK_30 gw "10.24.1.130" dev $interfazE
+	route add -net $RED_D netmask $MASK_27 gw "10.24.1.130" dev $interfazE
+	route add -net $RED_F netmask $MASK_28 gw "10.24.1.131" dev $interfazE
+	route add -net $RED_G netmask $MASK_30 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_H netmask $MASK_26 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_I netmask $MASK_27 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_J netmask $MASK_29 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_K netmask $MASK_28 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_L netmask $MASK_24 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_M netmask $MASK_30 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_N netmask $MASK_30 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_O netmask $MASK_30 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_P netmask $MASK_30 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_Q netmask $MASK_30 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_R netmask $MASK_30 gw "10.24.1.132" dev $interfazE
+	route add -net $RED_S netmask $MASK_27 gw "10.24.1.132" dev $interfazE
 
 	
 	validate_telnetd
