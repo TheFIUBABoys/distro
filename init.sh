@@ -226,16 +226,16 @@ function WEBSERVER {
 	route add -net $RED_E netmask $MASK_25 gw "192.168.8.1" dev $interfaz
 	route add -net $RED_F netmask $MASK_28 gw "192.168.8.1" dev $interfaz
 	route add -net $RED_G netmask $MASK_30 gw "192.168.8.1" dev $interfaz
-	route add -net $RED_H netmask $MASK_26 gw "192.168.8.3" dev $interfaz
-	route add -net $RED_I netmask $MASK_27 gw "192.168.8.3" dev $interfaz
-	route add -net $RED_J netmask $MASK_29 gw "192.168.8.3" dev $interfaz
-	route add -net $RED_K netmask $MASK_28 gw "192.168.8.3" dev $interfaz
-	route add -net $RED_M netmask $MASK_30 gw "192.168.8.3" dev $interfaz
-	route add -net $RED_N netmask $MASK_30 gw "192.168.8.3" dev $interfaz
-	route add -net $RED_O netmask $MASK_30 gw "192.168.8.3" dev $interfaz
-	route add -net $RED_P netmask $MASK_30 gw "192.168.8.3" dev $interfaz
-	route add -net $RED_Q netmask $MASK_30 gw "192.168.8.3" dev $interfaz
-	route add -net $RED_R netmask $MASK_30 gw "192.168.8.3" dev $interfaz
+	route add -net $RED_H netmask $MASK_26 gw $IP_VRRP_L dev $interfaz
+	route add -net $RED_I netmask $MASK_27 gw $IP_VRRP_L dev $interfaz
+	route add -net $RED_J netmask $MASK_29 gw $IP_VRRP_L dev $interfaz
+	route add -net $RED_K netmask $MASK_28 gw $IP_VRRP_L dev $interfaz
+	route add -net $RED_M netmask $MASK_30 gw $IP_VRRP_L dev $interfaz
+	route add -net $RED_N netmask $MASK_30 gw $IP_VRRP_L dev $interfaz
+	route add -net $RED_O netmask $MASK_30 gw $IP_VRRP_L dev $interfaz
+	route add -net $RED_P netmask $MASK_30 gw $IP_VRRP_L dev $interfaz
+	route add -net $RED_Q netmask $MASK_30 gw $IP_VRRP_L dev $interfaz
+	route add -net $RED_R netmask $MASK_30 gw $IP_VRRP_L dev $interfaz
 	route add -net $RED_S netmask $MASK_27 gw "192.168.8.1" dev $interfaz
 }
 
