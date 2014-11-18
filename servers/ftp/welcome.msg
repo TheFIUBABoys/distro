@@ -1,2 +1,1 @@
-Bienvenido al server FTP.
-Grupo 1. Exito =D
+FTP Grupo 10. Hola!

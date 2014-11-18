@@ -55,11 +55,11 @@ BROADCAST_WEB="192.168.8.255"
 MASCARA_WEB="255.255.255.0"
 
 # DIRECCIONES IP SERVIDOR TELNET
-IP_TELSERVER_E="10.24.1.136"
+IP_TELSERVER_E="10.24.1.133"
 BROADCAST_TELNETE="10.24.1.255"
 MASCARA_TELNETE="255.255.255.128"
-IP_TELSERVER_S="10.24.1.72"
-BROADCAST_TELNETS="10.24.1.95"
+IP_TELSERVER_S="10.10.5.8"
+BROADCAST_TELNETS="10.10.5.31"
 MASCARA_TELNETS="255.255.255.224"
 
 # DIRECCION IP SERVIDOR FTP
@@ -161,7 +161,7 @@ function HOSTB {
 	ifconfig $interfaz $IP_B broadcast $BROADCAST_B netmask $MASCARA_B
 
 	#RUTEO ESTATICO
-	route add -net $RED_A netmask $MASK_24 gw $IP_VRRP_H dev $interfaz
+	route add -net $RED_A netmask $MASK_25 gw $IP_VRRP_H dev $interfaz
 	route add -net $RED_B netmask $MASK_24 gw $IP_VRRP_H dev $interfaz
 	route add -net $RED_C netmask $MASK_30 gw $IP_VRRP_H dev $interfaz
 	route add -net $RED_D netmask $MASK_27 gw $IP_VRRP_H dev $interfaz
@@ -188,7 +188,7 @@ function HOSTC {
 	ifconfig $interfaz $IP_C broadcast $BROADCAST_C netmask $MASCARA_C
 
 	#RUTEO ESTATICO
-	route add -net $RED_A netmask $MASK_24 gw $IP_VRRP_B dev $interfaz
+	route add -net $RED_A netmask $MASK_25 gw $IP_VRRP_B dev $interfaz
 	route add -net $RED_C netmask $MASK_30 gw "10.24.3.3" dev $interfaz
 	route add -net $RED_D netmask $MASK_27 gw "10.24.3.3" dev $interfaz
 	route add -net $RED_E netmask $MASK_25 gw "10.24.3.3" dev $interfaz
@@ -219,7 +219,7 @@ function WEBSERVER {
 
 	#RUTEO ESTATICO
 
-	route add -net $RED_A netmask $MASK_24 gw "192.168.8.1" dev $interfaz	
+	route add -net $RED_A netmask $MASK_25 gw "192.168.8.1" dev $interfaz	
 	route add -net $RED_B netmask $MASK_24 gw "192.168.8.1" dev $interfaz
 	route add -net $RED_C netmask $MASK_30 gw "192.168.8.1" dev $interfaz
 	route add -net $RED_D netmask $MASK_27 gw "192.168.8.1" dev $interfaz
@@ -242,13 +242,9 @@ function WEBSERVER {
 function FTPSERVER {
 	#CONFIGURACION INTERFACES
 	ifconfig $interfaz $IP_FTP broadcast $BROADCAST_FTP netmask $MASCARA_FTP
-
-	#RUTEO ESTATICO
-	#CONFIGURACION INTERFACES
-	ifconfig $interfaz $IP_A broadcast $BROADCAST_A netmask $MASCARA_A
 	#RUTEO ESTATICO
 
-	route add -net $RED_A netmask $MASK_24 gw "10.92.27.33" dev $interfaz
+	route add -net $RED_A netmask $MASK_25 gw "10.92.27.33" dev $interfaz
 	route add -net $RED_B netmask $MASK_24 gw "10.92.27.33" dev $interfaz
 	route add -net $RED_C netmask $MASK_30 gw "10.92.27.33" dev $interfaz
 	route add -net $RED_E netmask $MASK_25 gw "10.92.27.33" dev $interfaz
@@ -289,25 +285,63 @@ function TELSERVER {
 	echo $interfazE
 	echo $interfazS
 	#RUTEO ESTATICO
+	
+	echo 3 table1 >> /etc/iproute2/rt_tables
+	echo 2 table2 >> /etc/iproute2/rt_tables
 
-	route add -net $RED_A netmask $MASK_24 gw "10.24.1.130" dev $interfazE
-	route add -net $RED_B netmask $MASK_24 gw "10.24.1.130" dev $interfazE
-	route add -net $RED_C netmask $MASK_30 gw "10.24.1.130" dev $interfazE
-	route add -net $RED_D netmask $MASK_27 gw "10.24.1.130" dev $interfazE
-	route add -net $RED_F netmask $MASK_28 gw "10.24.1.131" dev $interfazE
-	route add -net $RED_G netmask $MASK_30 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_H netmask $MASK_26 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_I netmask $MASK_27 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_J netmask $MASK_29 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_K netmask $MASK_28 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_L netmask $MASK_24 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_M netmask $MASK_30 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_N netmask $MASK_30 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_O netmask $MASK_30 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_P netmask $MASK_30 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_Q netmask $MASK_30 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_R netmask $MASK_30 gw "10.24.1.132" dev $interfazE
-	route add -net $RED_S netmask $MASK_27 gw "10.24.1.132" dev $interfazE
+
+	ip route add $RED_A/25 via 10.24.1.130 table table1
+	ip route add $RED_A/25 via 10.10.5.3 table table2	
+	ip route add $RED_B/24 via 10.24.1.130 table table1
+	ip route add $RED_B/24 via 10.10.5.2 table table2	
+	ip route add $RED_C/30 via 10.24.1.130 table table1
+	ip route add $RED_C/30 via 10.10.5.2 table table2	
+	ip route add $RED_D/27 via 10.24.1.131 table table1
+	ip route add $RED_D/27 via 10.10.5.2 table table2	
+	ip route add $RED_E/25 dev tap0 table table1
+	ip route add $RED_E/25 via 10.10.5.2 table table2
+	ip route add $RED_F/28 via 10.24.1.132 table table1
+	ip route add $RED_F/28 via 10.10.5.2 table table2	
+	ip route add $RED_G/30 via 10.24.1.132 table table1
+	ip route add $RED_G/30 via 10.10.5.2 table table2	
+	ip route add $RED_H/26 via 10.24.1.132 table table1
+	ip route add $RED_H/26 via 10.10.5.2 table table2	
+	ip route add $RED_I/27 via 10.24.1.132 table table1
+	ip route add $RED_I/27 via 10.10.5.2 table table2	
+	ip route add $RED_J/29 via 10.24.1.132 table table1
+	ip route add $RED_J/29 via 10.10.5.2 table table2	
+	ip route add $RED_K/28 via 10.24.1.132 table table1
+	ip route add $RED_K/28 via 10.10.5.2 table table2	
+	ip route add $RED_L/24 via 10.24.1.132 table table1
+	ip route add $RED_L/24 via 10.10.5.2 table table2	
+	ip route add $RED_M/30 via 10.24.1.132 table table1
+	ip route add $RED_M/30 via 10.10.5.2 table table2	
+	ip route add $RED_N/30 via 10.24.1.132 table table1
+	ip route add $RED_N/30 via 10.10.5.2 table table2	
+	ip route add $RED_O/30 via 10.24.1.132 table table1
+	ip route add $RED_O/30 via 10.10.5.2 table table2	
+	ip route add $RED_P/30 via 10.24.1.132 table table1
+	ip route add $RED_P/30 via 10.10.5.2 table table2	
+	ip route add $RED_Q/30 via 10.24.1.132 table table1
+	ip route add $RED_Q/30 via 10.10.5.2 table table2	
+	ip route add $RED_R/30 via 10.24.1.132 table table1
+	ip route add $RED_R/30 via 10.10.5.2 table table2	
+	ip route add $RED_S/27 via 10.24.1.132 table table1
+	ip route add $RED_S/27 dev tap1 table table2
+
+	ip rule flush
+
+	ip rule add table main prio 32766
+	ip rule add table default prio 32767
+
+	ip rule add from 10.10.5.8 lookup table2 prio 1001
+	ip rule add to 10.10.5.8 lookup table2 prio 1002
+	ip rule add from 10.24.1.133 lookup table1 prio 1003
+	ip rule add to 10.24.1.133 lookup table1 prio 1004
+
+	ip rule add table table1 prio 1101
+	ip rule add table table2 prio 1102
+
 
 	
 	validate_telnetd
@@ -316,7 +350,7 @@ function TELSERVER {
 		# Arranca
 	
 		#CONFIGURACION SERVICIO TELNET
-		#cp ./servers/telnet/inetd.conf /etc/inetd.conf
+		cp ./servers/telnet/inetd.conf /etc/inetd.conf
 		/etc/init.d/inetd restart
 		#/etc/init.d/openbsd-inetd restart
 		
