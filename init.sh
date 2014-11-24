@@ -74,7 +74,6 @@ IP_VRRP_H="10.92.27.132"
 IP_VRRP_L="192.168.8.4"
 
 
-#funcion de instalacion por si necesitamos ---> verificar_dependencia_e_instalar telnetd
 function verificar_dependencia_e_instalar {
 	paquete=$1
 	INSTALADO=`dpkg -s $paquete | grep -i "Status: install ok installed" | wc -l`
@@ -88,9 +87,6 @@ function verificar_dependencia_e_instalar {
 }
 
 
-
-# Esta funcion chequea que este el programa apache2 instalado
-# En las compus del laboratorio esta apache2 y existe  /etc/init.d/apache2
 function validate_apache2 {
 	echo "Verificando que apache2 este instalado..."
 	if [ -f /etc/init.d/apache2 ]; then
@@ -102,7 +98,6 @@ function validate_apache2 {
 	fi
 }
 
-# Esta funcion chequea que este el programa vsftpd instalado
 function validate_ftp {
 	echo "Verificando que el server FTP este instalado..."
 	if [ -f /etc/init.d/vsftpd ]; then
@@ -265,31 +260,26 @@ function FTPSERVER {
 
 	validate_ftp
 	if [ $? -eq 1 ]; then
-		echo "Configurando FTP Server ..."
+		echo "FTP..."
 		#cp ./servers/ftp/vsftpd.conf /etc/vsftpd.conf
 		/etc/init.d/vsftpd start
-		echo "OK! FTP Server configurado."
+		echo "Bien."
 	else
-		echo "No se pudo configurar el FTP Server correctamente."
+		echo "Mal."
 	fi
 }
 
 function TELSERVER {
-	#Este IGNORA las interfaces que recibe por parametro
-	#CONFIGURACION INTERFACES
-	interfazE="tap0"
-	interfazS="tap1"
+	interfazE="tap4"
+	interfazS="tap5"
 	ifconfig $interfazE $IP_TELSERVER_E broadcast $BROADCAST_TELNETE netmask $MASCARA_TELNETE
-
 	ifconfig $interfazS $IP_TELSERVER_S broadcast $BROADCAST_TELNETS netmask $MASCARA_TELNETS
+
 	echo $interfazE
 	echo $interfazS
-	#RUTEO ESTATICO
-	
+
 	echo 3 table1 >> /etc/iproute2/rt_tables
 	echo 2 table2 >> /etc/iproute2/rt_tables
-
-
 	ip route add $RED_A/25 via 10.24.1.130 table table1
 	ip route add $RED_A/25 via 10.10.5.3 table table2	
 	ip route add $RED_B/24 via 10.24.1.130 table table1
@@ -298,7 +288,7 @@ function TELSERVER {
 	ip route add $RED_C/30 via 10.10.5.2 table table2	
 	ip route add $RED_D/27 via 10.24.1.131 table table1
 	ip route add $RED_D/27 via 10.10.5.2 table table2	
-	ip route add $RED_E/25 dev tap0 table table1
+	ip route add $RED_E/25 dev tap4 table table1
 	ip route add $RED_E/25 via 10.10.5.2 table table2
 	ip route add $RED_F/28 via 10.24.1.132 table table1
 	ip route add $RED_F/28 via 10.10.5.2 table table2	
@@ -327,7 +317,7 @@ function TELSERVER {
 	ip route add $RED_R/30 via 10.24.1.132 table table1
 	ip route add $RED_R/30 via 10.10.5.2 table table2	
 	ip route add $RED_S/27 via 10.24.1.132 table table1
-	ip route add $RED_S/27 dev tap1 table table2
+	ip route add $RED_S/27 dev tap5 table table2
 
 	ip rule flush
 
@@ -346,17 +336,13 @@ function TELSERVER {
 	
 	validate_telnetd
 	if [ $? -eq 1 ]; then
-		echo "Configurando Telnet Server ..."
-		# Arranca
-	
-		#CONFIGURACION SERVICIO TELNET
+		echo "Telnet..."
 		cp ./servers/telnet/inetd.conf /etc/inetd.conf
 		/etc/init.d/inetd restart
-		#/etc/init.d/openbsd-inetd restart
 		
-		echo "OK! Telnet Server configurado."
+		echo "Bien."
 	else
-		echo "No se pudo configurar el Telnet Server correctamente."
+		echo "Mal"
 	fi
 }
 
@@ -378,55 +364,49 @@ function no_forward {
 }
 
 
-
-if [ $# != 2 ]; then
-	echo "Modo de uso :: [HOST] [interfaz]"
-	exit 0
-fi
-
 interfaz=$2
 
 if [ $1 = "HOSTA" ]; then
 	echo "HOSTA"
-	echo "Configurando interfaces y tablas de ruteo.."
+	echo "Configurando..."
 	HOSTA
-	echo "Tablas de ruteo e interfaces configuradas"
+	echo "Listo."
 	no_forward
 	exit 0
 fi
 
 if [ $1 = "HOSTB" ]; then
 	echo "HOSTB"
-	echo "Configurando interfaces y tablas de ruteo.."
+	echo "Configurando..."
 	HOSTB
-	echo "Tablas de ruteo e interfaces configuradas"
+	echo "Listo."
 	no_forward
 	exit 0
 fi
 
 if [ $1 = "HOSTC" ]; then
 	echo "HOSTC"
-	echo "Configurando interfaces y tablas de ruteo.."
+	echo "Configurando..."
 	HOSTC
-   	echo "Tablas de ruteo e interfaces configuradas"
+   	echo "Listo."
 	no_forward
 	exit 0
 fi
 
 if [ $1 = "WEBSERVER" ]; then
 	echo "WEBSERVER"
-	echo "Configurando interfaces y tablas de ruteo.."
+	echo "Configurando..."
 	WEBSERVER
-   	echo "Tablas de ruteo e interfaces configuradas"
+   	echo "Listo"
 	no_forward
 	exit 0
 fi
 
 if [ $1 = "FTPSERVER" ] ; then
 	echo "FTPSERVER"
-	echo "Configurando interfaces y tablas de ruteo.."
+	echo "Configurando..."
 	FTPSERVER
-   	echo "Tablas de ruteo e interfaces configuradas"
+   	echo "Listo."
 	no_forward
 	exit 0
 fi
@@ -434,13 +414,13 @@ fi
 if [ $1 = "TELSERVER" ]; then
 	echo "TELSERVER"
 
-	echo "Configurando interfaces y tablas de ruteo.."
+	echo "Configurando..."
 	TELSERVER
-   	echo "Tablas de ruteo e interfaces configuradas"
+   	echo "Listo."
 	no_forward
 	exit 0
 fi
 
 
-echo "No se encontro el host " $1
+echo "Flasheaste." $1
 exit 1
